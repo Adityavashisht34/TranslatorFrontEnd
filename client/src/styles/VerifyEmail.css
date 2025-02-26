@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+
+.verify-email {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.verify-email-container {
+    background: #ffffff;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.verify-email-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.verify-email-container p {
+    color: #666;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.verify-email-container .success {
+    color: #28a745;
+}
+
+.verify-email-container .error {
+    color: #dc3545;
+}

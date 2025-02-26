@@ -1,0 +1,163 @@
+/* src/styles/Register.css */
+@import "tailwindcss";
+
+.register {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("../assets/re.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+    position: relative;
+}
+
+.home-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-icon:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.register-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.register-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    outline: none;
+}
+
+.register-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form button:hover {
+    background: #2980b9;
+}
+
+.register-form button:active {
+    transform: scale(0.98);
+}
+
+.register-form button:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+.login-link {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    text-align: left;
+    display: block;
+}
+
+.spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Add responsive design */
+@media (max-width: 480px) {
+    .register-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .register-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .register-form input,
+    .register-form button {
+        font-size: 0.875rem;
+    }
+
+    .home-icon {
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+        padding: 8px;
+    }
+}
