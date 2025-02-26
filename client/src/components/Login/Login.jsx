@@ -33,7 +33,7 @@ function Login() {
             });
 
             if (response.status === 200 && response.data) {
-                localStorage.setItem('user', JSON.stringify(response.data));
+                localStorage.setItem('user', response.data.name);
                 localStorage.setItem('userId', response.data.userId);
                 navigate('/'); // Redirect to the root path (LetsTranslate component)
             }
